@@ -70,6 +70,11 @@ void setColorConversion709( GLfloat conversionMatrix[9] )
     return self;
 }
 
+- (id)initWithSessionPreset:(NSString *)sessionPreset cameraPosition:(AVCaptureDevicePosition)cameraPosition;
+{
+  return [self initWithSessionPreset:sessionPreset cameraPosition:cameraPosition captureAsYUV:NO];
+}
+
 - (id)initWithSessionPreset:(NSString *)sessionPreset cameraPosition:(AVCaptureDevicePosition)cameraPosition captureAsYUV:(BOOL)yuv;
 {
 	if (!(self = [super init]))
